@@ -17,6 +17,7 @@ class CharactersCubit extends Cubit<CharactersState> {
      charactersRepository.getAllCharacters().then((characters)
      {
        //push data to UI from repositories layer
+       // send characters to character in loaded
        emit(CharactersLoaded(characters));
        this.characters=characters;
 
