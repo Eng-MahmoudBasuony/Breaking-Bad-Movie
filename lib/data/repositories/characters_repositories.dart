@@ -15,10 +15,11 @@ class CharactersRepository{
   CharactersRepository(this.charactersWebServices);
 
 
-  Future<List<dynamic>> getAllCharacters()async{
-
+  Future<List<Character>> getAllCharacters()async{
+     //---- get data from webservice -------//
      final character =await charactersWebServices.getAllCharacters();
 
+     //----- modeling fro json and return ---------//
      return character.map(
              (characterElement)=>Character.fromJson(characterElement)
      ).toList();
