@@ -17,7 +17,7 @@ class CharactersRepository{
 
   Future<List<Character>> getAllCharacters()async{
      //---- get data from webservice -------//
-     final character =await charactersWebServices.getAllCharacters();
+     final character = await charactersWebServices.getAllCharacters();
 
      //----- modeling fro json and return ---------//
      return character.map(
